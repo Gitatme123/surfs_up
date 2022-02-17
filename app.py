@@ -1,13 +1,53 @@
-# import the flask dependency 
-from flask import Flask
- # create a new flask instance ( a singuler version of something in programming)
-# # the __name__ variable denotes the name of the current function
-# #   we use it to determine if the code is bring run from the terminal or if it was
-# #   imported into another piece of code. It's called a magic method in Python
+import datetime as dt
+import numpy as np
+import pandas as pd
+
+#get the dependencies we need from SQLAlchemy, which will help us access our data in the SQLLite Database
+import sqlalchemy
+from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine, func
+
+#add the code to import the dependencies that we need for Flask
+from flask import Flask, jsonify
+
+
+#set up database engine
+engine = create_engine("sqlite:///hawaii.sqlite")
+
+#reflect the database into our classes
+Base = automap_base()
+Base.prepare(engine, reflect=True)
+
+#save our references to each table. 
+Measurement = Base.classes.measurement
+Station = Base.classes.station
+
+#create a session link from Python to our database with this code
+session = Session(engine)
+
+#to define our Flask app, we are creating a Flask application called app
 app = Flask(__name__)
-# #create the flask routine, define the starting point known as the root
-# # the slash notes that we want to put our data at the root of our routes. 
-# #     The forward slash is commonly known as the highest level of hierarchy in any computer system
-@app.route('/')
-def hello_world():
-  return 'Hello world'
+
+import app
+
+print("example __name__ = %s", __name__)
+
+if __name__ == "__main__":
+    print("example is being run directly.")
+else:
+    print("example is being imported")
+
+#defining the welcome route
+@app.route("/")
+
+def welcome():
+    return(
+    '''
+    Welcome to the Climate Analysis API!
+    Available Routes:
+    /api/v1.0/precipitation
+    /api/v1.0/stations
+    /api/v1.0/tobs
+    /api/v1.0/temp/start/end
+    ''')
