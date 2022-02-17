@@ -29,15 +29,6 @@ session = Session(engine)
 #to define our Flask app, we are creating a Flask application called app
 app = Flask(__name__)
 
-import app
-
-print("example __name__ = %s", __name__)
-
-if __name__ == "__main__":
-    print("example is being run directly.")
-else:
-    print("example is being imported")
-
 #defining the welcome route
 @app.route("/")
 
@@ -51,3 +42,60 @@ def welcome():
     /api/v1.0/tobs
     /api/v1.0/temp/start/end
     ''')
+
+#creating new route for precipitation analysis
+@app.route("/api/v1.0/precipitation")
+
+def precipitation():
+   prev_year = dt.date(2017, 8, 23) - dt.timedelta(days=365)
+   precipitation = session.query(Measurement.date, Measurement.prcp).\
+    filter(Measurement.date >= prev_year).all()
+   precip = {date: prcp for date, prcp in precipitation}
+   return jsonify(precip)
+
+#adding a route for our app that will allow this analysis to come to life. 
+# But adding the stations route first   
+@app.route("/api/v1.0/stations")
+
+def stations():
+    results = session.query(Station.station).all()
+    stations = list(np.ravel(results))
+    return jsonify(stations=stations)
+
+#creating a flask route for the temperature by month average
+@app.route("/api/v1.0/tobs")
+def temp_monthly():
+    prev_year = dt.date(2017, 8, 23) - dt.timedelta(days=365)
+    results = session.query(Measurement.tobs).\
+      filter(Measurement.station == 'USC00519281').\
+      filter(Measurement.date >= prev_year).all()
+    temps = list(np.ravel(results))
+    return jsonify(temps=temps)
+
+#adding both the starting dates and end dates to a route so that we can calculate the descriptive statistics
+#when copying the URL into the search bar, we'll need to add actual start and end dates in place of the "start" and "end" 
+# in the specific URL in this format 2017-06-01/2017-06-30
+@app.route("/api/v1.0/temp/<start>")
+@app.route("/api/v1.0/temp/<start>/<end>")
+def stats(start=None, end=None):
+    sel = [func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)]
+
+    if not end:
+        results = session.query(*sel).\
+            filter(Measurement.date >= start).all()
+        temps = list(np.ravel(results))
+        return jsonify(temps)
+
+    results = session.query(*sel).\
+        filter(Measurement.date >= start).\
+        filter(Measurement.date <= end).all()
+    temps = list(np.ravel(results))
+    return jsonify(temps)
+
+
+
+#notation for updating flask app
+    #export FLASK_APP=app.py
+    #set FLASK_APP=app.py
+    #flask run
+    
