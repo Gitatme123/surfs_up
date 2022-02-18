@@ -18,25 +18,17 @@ Surf and Ice Cream Shop Analysis for Oahu
 * 4. The standard deviation supports our belief in June being the superior month. June has a lower standard deviation than December, meaning there is less likely to be a large variance in June, where as its slightly more likely to have variance in December. 3.26 in June vs. 3.75 in December.
 * 5. Therefore from the data, and from personal experience, we can conclude that June would have better weather more frequently than December would.
 #### High Level Summary
-* My conclusion is that June is the "better" month.
+* My conclusion is that June is the "better" month given the data we have access to.
 * The weather is warmer in June more frequently and more consitenly than it is in December as noted in the analysis points above. The frequency of temperature recordings is greatest around 75 degrees in June, and around 71 in December. We can also see from the descriptive stats that there is a greater chance of having a cold day in December, which would basically foreit all sales for that day. June does not have a good chance of that happening with the lowest low recorded as 64 with December's lowest low being 56.
-##### Additional queries that I would run
+#### What would help with this analysis?
+* 2 Queries I would run are a query for analyzing the precipitation by date, and the next query would be analyzing the 
 * I would want a the reason for comparing June against December. Our buddy never designates a reason for the analysis, and therefore we are left to assume many things.
 * I would want to see data for January and February to compare agaist June, if the reason for the analysis was "trying to compare the peak of summer to the pit of winter". Those to me would seem to be the 2 coldest months that I would want data on to determine if we could be open at all those 2 months. 
 * I would also want to see the precipitation data for the dates and also the time of day. We know that temperature follows the basic patter of peaking in the afternoon and bottoming out after midnight in most places around the world. Precipitation in my environment is seemingly random, but I do know that in certain climates around the world it also extremely consistent. Regardless of its assumed distribution, it could be a very helpful addition to this analysis.
 
+##### Resources used in Analysis
+<img width="527" alt="Screen Shot 2022-02-18 at 1 47 39 PM" src="https://user-images.githubusercontent.com/95602006/154751889-90b1bbde-e5d4-448f-9539-7271bed1512c.png"> <img width="167" alt="Screen Shot 2022-02-18 at 12 51 52 PM" src="https://user-images.githubusercontent.com/95602006/154751300-c84050f6-8359-4643-ac2f-a2a499cc33c6.png">
 
-
-
-
-
-
-
-##### Resources for Analysis
-<img width="527" alt="Screen Shot 2022-02-18 at 1 47 39 PM" src="https://user-images.githubusercontent.com/95602006/154751889-90b1bbde-e5d4-448f-9539-7271bed1512c.png">
-<img width="167" alt="Screen Shot 2022-02-18 at 12 51 52 PM" src="https://user-images.githubusercontent.com/95602006/154751300-c84050f6-8359-4643-ac2f-a2a499cc33c6.png">
-
-<img width="503" alt="Screen Shot 2022-02-18 at 1 50 16 PM" src="https://user-images.githubusercontent.com/95602006/154751948-3fca9e9c-ca7a-4a24-8883-4804fa21ac78.png">
-<img width="163" alt="Screen Shot 2022-02-18 at 12 52 01 PM" src="https://user-images.githubusercontent.com/95602006/154751320-b648f302-37a6-4d33-b64d-c9cd2b65d12a.png">
+<img width="503" alt="Screen Shot 2022-02-18 at 1 50 16 PM" src="https://user-images.githubusercontent.com/95602006/154751948-3fca9e9c-ca7a-4a24-8883-4804fa21ac78.png"> <img width="163" alt="Screen Shot 2022-02-18 at 12 52 01 PM" src="https://user-images.githubusercontent.com/95602006/154751320-b648f302-37a6-4d33-b64d-c9cd2b65d12a.png">
 
 
