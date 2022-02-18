@@ -17,11 +17,15 @@ Surf and Ice Cream Shop Analysis for Oahu
 * 3. The top 75% of June is still more than 50% of December. I can see this by referencing the bottom quartile's numbers. June's bottom quartile is 73 degrees making the temperature at or greater than 73 degrees 75% of the time. The mean is 75 degrees.  December has a lower quartile of 69 degrees, and a mean of 71 degrees. June therefore has a hotter lower quartile than December, so 75% of the time June will be at or above 73 degrees, where as December will only be at or above 73 degrees maybe 30/40% of the month.
 * 4. The standard deviation supports our belief in June being the superior month. June has a lower standard deviation than December, meaning there is less likely to be a large variance in June, where as its slightly more likely to have variance in December. 3.26 in June vs. 3.75 in December.
 * 5. Therefore from the data, and from personal experience, we can conclude that June would have better weather more frequently than December would.
+
 #### High Level Summary
 * My conclusion is that June is the "better" month given the data we have access to.
 * The weather is warmer in June more frequently and more consitenly than it is in December as noted in the analysis points above. The frequency of temperature recordings is greatest around 75 degrees in June, and around 71 in December. We can also see from the descriptive stats that there is a greater chance of having a cold day in December, which would basically foreit all sales for that day. June does not have a good chance of that happening with the lowest low recorded as 64 with December's lowest low being 56.
+
 #### What would help with this analysis?
-* 2 Queries I would run are a query for analyzing the precipitation by date, and the next query would be analyzing the 
+* 2 Queries I would run would to help with the analysis would be:
+    * 1. A query to analyze the precipitation data by date and by station.
+    * 2. A query to analyze the distribution of the data by station, because location even on a small island could play a large role in this.
 * I would want a the reason for comparing June against December. Our buddy never designates a reason for the analysis, and therefore we are left to assume many things.
 * I would want to see data for January and February to compare agaist June, if the reason for the analysis was "trying to compare the peak of summer to the pit of winter". Those to me would seem to be the 2 coldest months that I would want data on to determine if we could be open at all those 2 months. 
 * I would also want to see the precipitation data for the dates and also the time of day. We know that temperature follows the basic patter of peaking in the afternoon and bottoming out after midnight in most places around the world. Precipitation in my environment is seemingly random, but I do know that in certain climates around the world it also extremely consistent. Regardless of its assumed distribution, it could be a very helpful addition to this analysis.
