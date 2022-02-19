@@ -25,14 +25,14 @@ W. Any likes our analysis but wants more info about temperature trends before op
 5. Therefore from the data, and from personal experience, we can conclude that June would have better weather more frequently than December would.
 
 #### High Level Summary
-* My conclusion is that June is the "better" month given the data we have access to.
+* My conclusion is that June is the "superior" month during the year when compared to December. 
 * The weather is warmer in June more frequently and more consitenly than it is in December as noted in the analysis points above. The frequency of temperature recordings is greatest around 75 degrees in June, and around 71 in December. We can also see from the descriptive stats that there is a greater chance of having a cold day in December, which would basically foreit all sales for that day. June does not have a good chance of that happening with the lowest low recorded as 64 with December's lowest low being 56.
+* June is a good month to be open for Business, but December is risky.
 
 
 #### 2 additional queries I would run to analyze more data for the analysis
-* 2 Queries I would run would to help with the analysis would be:
-    * 1. A query to analyze the precipitation data by date and by station.
-    * 2. A query to analyze the distribution of the data by station, because location even on a small island could play a large role in this.
+    1. A query to analyze the precipitation data by date and by station.
+    2. A query to analyze the distribution of the data by station, because location even on a small island could play a large role in this.
 
 #### What would help complete this analysis?
 * We need to know a little more about the data, when throughout the dat were these temperatures recorded? Is it the average of the whole day? Were there other factors that could have significantly contributed to the average that should be considered outliers? Current events like a hurricane?
