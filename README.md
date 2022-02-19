@@ -40,6 +40,7 @@ W. Any likes our analysis but wants more info about temperature trends before op
 * I would want to see data for January and February to compare, if the reason for the analysis was "trying to compare the peak of summer to the pit of winter". Those to me would seem to be the 2 coldest months that I would want data on to determine if we could be open at all those 2 months. June is also not the hottest month in many places, with July or August taking that award.
 * I would also want to see the precipitation data for the dates and also the time of day. We know that temperature follows the basic patter of peaking in the afternoon and bottoming out after midnight in most places around the world. Precipitation in my environment is seemingly random, but I do know that in certain climates around the world it also extremely consistent. Regardless of its assumed distribution, it could be a very helpful addition to this analysis.
 
+___________________________________________________
 ##### Resources used in Analysis
 <img width="527" alt="Screen Shot 2022-02-18 at 1 47 39 PM" src="https://user-images.githubusercontent.com/95602006/154751889-90b1bbde-e5d4-448f-9539-7271bed1512c.png"> <img width="167" alt="Screen Shot 2022-02-18 at 12 51 52 PM" src="https://user-images.githubusercontent.com/95602006/154751300-c84050f6-8359-4643-ac2f-a2a499cc33c6.png">
 
