@@ -28,10 +28,13 @@ W. Any likes our analysis but wants more info about temperature trends before op
 * My conclusion is that June is the "better" month given the data we have access to.
 * The weather is warmer in June more frequently and more consitenly than it is in December as noted in the analysis points above. The frequency of temperature recordings is greatest around 75 degrees in June, and around 71 in December. We can also see from the descriptive stats that there is a greater chance of having a cold day in December, which would basically foreit all sales for that day. June does not have a good chance of that happening with the lowest low recorded as 64 with December's lowest low being 56.
 
-#### What would help with this analysis?
+
+#### 2 additional queries I would run to analyze more data for the analysis
 * 2 Queries I would run would to help with the analysis would be:
     * 1. A query to analyze the precipitation data by date and by station.
     * 2. A query to analyze the distribution of the data by station, because location even on a small island could play a large role in this.
+
+#### What would help complete this analysis?
 * We need to know a little more about the data, when throughout the dat were these temperatures recorded? Is it the average of the whole day? Were there other factors that could have significantly contributed to the average that should be considered outliers? Current events like a hurricane?
 * I would like to have criteria in analyzing, but because we have no context, we can only make an informed assumption at this point.
 * I would want to see data for January and February to compare, if the reason for the analysis was "trying to compare the peak of summer to the pit of winter". Those to me would seem to be the 2 coldest months that I would want data on to determine if we could be open at all those 2 months. June is also not the hottest month in many places, with July or August taking that award.
